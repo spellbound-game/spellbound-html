@@ -1,0 +1,83 @@
+@font-face {
+  font-family: arcadeClassic;
+  src: url(ARCADECLASSIC.ttf);
+}
+body{
+  background-color: black;
+  background-image: url("bg.PNG");
+  background-size: cover;
+}
+#body_content{
+  margin: 0 auto;
+  width: 1200px;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  padding-bottom: 100px;
+}
+h1{
+  text-align: center;
+  font-family: arcadeClassic;
+  font-size: 40px;
+  color: white;
+}
+p1{
+  font-size: 20px;
+  color: white;
+}
+p2{
+  font-size: 12px;
+  color: white;
+}
+h2{
+  text-align: center;
+  font-family: arcadeClassic;
+  font-size: 20px;
+  color: white;
+}
+h3{
+  font-family: arcadeClassic;
+  color: white;
+}
+
+#spacer{
+  height: 700px;
+}
+#changelog_wrapper{
+  width: 100%;
+
+}
+#changelog{
+  width: 40%;
+  height: 300px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top:10px;
+  background-color: #222222;
+  display:inline-block;
+  padding-bottom: 30px;
+  overflow-y: scroll;
+  margin-left: 20px;
+  margin-top: 50px;
+}
+#controls{
+  display:inline-block;
+  float: right;
+  margin-right: 20px;
+  margin-top: 50px;
+}
+#controls_img{
+  height: 340px;
+}
+#webgl-content{
+  margin-top: 100px;
+}
+#bug_button{
+  width: 200px;
+  height: 50px;
+  font-size: 20px;
+  margin-left: 120px;
+}
+
+form{
+  color: white;
+}
