@@ -12,12 +12,21 @@
       var gameInstance = UnityLoader.instantiate("gameContainer", "Build/spellbound html v5.json", {onProgress: UnityProgress});
     </script>
     <style>
-        body,head,.webgl-content,#gameContainer{
+        body,head{
             height: 100%;
             width: 100%;
             position: fixed;
             top: 0px;
             left: 0px;
+            overflow: hidden;
+        }
+        
+        .webgl-content,#gameContainer{
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            padding: 0px;
+            margin: 0px;
         }
     </style>
   </head>
