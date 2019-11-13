@@ -5,8 +5,13 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <title>Spellbound</title>
         <link rel="shortcut icon" href="resources/icon.png">
-        <link rel="stylesheet" href="resources/style.css">
+
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+
+        <link rel="stylesheet" href="resources/style.css">
+
         <style>
             @keyframes fadein-top {
                 from { opacity: 0; margin-top:-50px;}
@@ -75,7 +80,7 @@
             }
             body{
                 image-rendering: auto;
-                background: #111;  /* fallback for old browsers */
+                background: #000;  /* fallback for old browsers */
                 background-attachment: fixed;
                 height: 100%;
             }
@@ -108,17 +113,28 @@
                 overflow: hidden;
             }
             #content{
-                -webkit-animation: fadein-wait 2s; /* Safari, Chrome and Opera > 12.1 */
-                -moz-animation: fadein-wait 2s; /* Firefox < 16 */
-                -ms-animation: fadein-wait 2s; /* Internet Explorer */
-                -o-animation: fadein-wait 2s; /* Opera < 12.1 */
-                animation: fadein-wait 2s;
-
+                background: rgba(0,0,0,0);
+                -webkit-animation: fadein-wait 3s; /* Safari, Chrome and Opera > 12.1 */
+                -moz-animation: fadein-wait 3s; /* Firefox < 16 */
+                -ms-animation: fadein-wait 3s; /* Internet Explorer */
+                -o-animation: fadein-wait 3s; /* Opera < 12.1 */
+                animation: fadein-wait 3s;
+                width: 70%;
+                margin: 0 auto;
+                padding-bottom: 200px;
             }
             #subheader{
                 color: #888;
                 width: 100%;
                 text-align: center;
+                margin-bottom: 50px;
+            }
+            .carousel{
+                margin: 200px auto;
+                width: 70%;
+            }
+            .s{
+                background-color: white;
             }
         </style>
     </head>
@@ -127,12 +143,41 @@
             <img id="logo_img" src="resources/logo.png" alt="Logo">
         </div>
         <div id='content'>
-            <p id='subheader'>A game by Neil, Porter and Ethan</p>
-            </br>
-            <input id="bug_button" type="button" value="Give us some feedback!" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSeG9X9jxsSyG3DaWL1aNKWSvSLKsd_aLYzq6y1SluocylRvNw/viewform?fbclid=IwAR0Y_-BSDPerTEHDQXs1tpU_AKrfC-RtE-dD4lBqr2f92OSyfVUc66DlFFE')" />
-            <input id="game_button" type="button" value="Try out the HTML version" onclick="window.location.href = 'demo.html';" />
+            <p id='subheader'>A GAME ABOUT COOPERATION</p>
 
-            <div id='scrollbox'>
+            </br>
+
+            <div class="button" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSeG9X9jxsSyG3DaWL1aNKWSvSLKsd_aLYzq6y1SluocylRvNw/viewform?fbclid=IwAR0Y_-BSDPerTEHDQXs1tpU_AKrfC-RtE-dD4lBqr2f92OSyfVUc66DlFFE')">
+                <span class="button__mask"></span>
+                <span class="button__text">GIVE US SOME FEEDBACK</span>
+                <span class="button__text button__text--bis">GIVE US SOME FEEDBACK</span>
+            </div>
+
+            <div class="button" onclick="window.location.href = 'demo.html';">
+                <span class="button__mask"></span>
+                <span class="button__text">TRY OUT THE HTML VERSION</span>
+                <span class="button__text button__text--bis">TRY OUT THE HTML VERSION</span>
+            </div>
+
+            <div class="button" onclick="window.location.href ='https://github.com/spellbound-game'">
+                <span class="button__mask"></span>
+                <span class="button__text">CHECK IT OUT ON GIT</span>
+                <span class="button__text button__text--bis">CHECK IT OUT ON GIT</span>
+            </div>
+
+            <div class="carousel">
+                <div class='s'>
+                    <img src='resources/bg.PNG'>
+                </div>
+                <div class='s'>
+                    <img src='resources/bg.PNG'>
+                </div>
+                <div class='s'>
+                    <img src='resources/bg.PNG'>
+                </div>
+            </div>
+
+            <div id='scrollbox' style='display:none;'>
                 <ol id='changelog'>
                     <li>
                         <span class='change_date'>1/9/19</span>
@@ -166,9 +211,28 @@
                     </li>
                 </ol>
             </div>
-            <div id="controls">
+            <div id="controls" style='display: none;'>
                 <img id="controls_img" src="resources/KeyboardControls.png" alt="Trulli">
             </div>
         </div>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+        <script>
+            
+            $(document).ready(function(){
+                $('.carousel').slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    dots:true,
+                    speed: 1000,
+                    centerMode: true,
+                    infinite: true,
+                    adaptiveHeight: true,
+                    variableWidth: true,
+                    autoplay: true,
+                    autoplaySpeed: 5000
+                });
+            });
+        </script>
     </body>
 </html>
