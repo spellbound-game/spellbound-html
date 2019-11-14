@@ -85,7 +85,12 @@
                 height: 100%;
             }
             #logo_img{
-                image-rendering: crisp-edges;
+                -ms-interpolation-mode: nearest-neighbor;
+                image-rendering: -webkit-optimize-contrast;
+                image-rendering: -webkit-crisp-edges;
+                image-rendering: -moz-crisp-edges;
+                image-rendering: -o-crisp-edges;
+                image-rendering: pixelated;
                 -webkit-animation: fadein-top 3s; /* Safari, Chrome and Opera > 12.1 */
                 -moz-animation: fadein-top 3s; /* Firefox < 16 */
                 -ms-animation: fadein-top 3s; /* Internet Explorer */
@@ -227,7 +232,7 @@
                     speed: 1000,
                     centerMode: true,
                     infinite: true,
-                    adaptiveHeight: true,
+                    adaptiveHeight: false,
                     variableWidth: true,
                     autoplay: true,
                     autoplaySpeed: 5000
