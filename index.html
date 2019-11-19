@@ -80,9 +80,25 @@
             }
             body{
                 image-rendering: auto;
-                background: #000;  /* fallback for old browsers */
+                background-image:url('resources/bg.PNG');  /* fallback for old browsers */
                 background-attachment: fixed;
+                background-size:cover;
                 height: 100%;
+                margin:0px;
+                padding:0px;
+                font-family: 'Work Sans', sans-serif;
+	            text-align: center;
+            }
+            .body-color{
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0,0,0,0.7);
+                position: fixed;
+                z-index: -1;
+                float: left;
+                -moz-box-shadow:    inset 0 0 100px #000000;
+                -webkit-box-shadow: inset 0 0 100px #000000;
+                box-shadow:         inset 0 0 100px #000000;
             }
             #logo_img{
                 -ms-interpolation-mode: nearest-neighbor;
@@ -135,8 +151,8 @@
                 margin-bottom: 50px;
             }
             .carousel{
-                margin: 200px auto;
-                width: 70%;
+                margin: 50px auto;
+                width: 700px;
             }
             .s{
                 background-color: white;
@@ -144,14 +160,26 @@
         </style>
     </head>
     <body>
+        <div class='body-color'>
+
+        </div>
         <div id='header'>
             <img id="logo_img" src="resources/logo.png" alt="Logo">
         </div>
         <div id='content'>
             <p id='subheader'>A GAME ABOUT COOPERATION</p>
-
             </br>
-
+            <div class="carousel" style='display: none;'>
+                <div class='s'>
+                    <img width='700px' height='500px' src='resources/bg.PNG'>
+                </div>
+                <div class='s'>
+                        <img width='700px' height='500px' src='resources/bg.PNG'>
+                </div>
+                <div class='s'>
+                        <img width='700px' height='500px' src='resources/bg.PNG'>
+                </div>
+            </div>
             <div class="button" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSeG9X9jxsSyG3DaWL1aNKWSvSLKsd_aLYzq6y1SluocylRvNw/viewform?fbclid=IwAR0Y_-BSDPerTEHDQXs1tpU_AKrfC-RtE-dD4lBqr2f92OSyfVUc66DlFFE')">
                 <span class="button__mask"></span>
                 <span class="button__text">GIVE US SOME FEEDBACK</span>
@@ -168,18 +196,6 @@
                 <span class="button__mask"></span>
                 <span class="button__text">CHECK IT OUT ON GIT</span>
                 <span class="button__text button__text--bis">CHECK IT OUT ON GIT</span>
-            </div>
-
-            <div class="carousel">
-                <div class='s'>
-                    <img src='resources/bg.PNG'>
-                </div>
-                <div class='s'>
-                    <img src='resources/bg.PNG'>
-                </div>
-                <div class='s'>
-                    <img src='resources/bg.PNG'>
-                </div>
             </div>
 
             <div id='scrollbox' style='display:none;'>
@@ -232,7 +248,7 @@
                     speed: 1000,
                     centerMode: true,
                     infinite: true,
-                    adaptiveHeight: false,
+                    adaptiveHeight: true,
                     variableWidth: true,
                     autoplay: true,
                     autoplaySpeed: 5000

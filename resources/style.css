@@ -1,9 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,700,900');
- body {
-	 font-family: 'Work Sans', sans-serif;
-	 background: #111;
-	 text-align: center;
-}
  .wrapper {
 	 width: 100vw;
 	 height: 100vh;
