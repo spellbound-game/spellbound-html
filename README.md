@@ -4,4 +4,4 @@
 
 The front-facing website for the development of Spellbound, a game by Porter, Neil, Ethan, and Aiden.
 
-## Current Version: 553
+## Current Version: *Build 660*
