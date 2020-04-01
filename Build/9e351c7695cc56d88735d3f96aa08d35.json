@@ -1,0 +1,16 @@
+{
+"companyName": "DefaultCompany",
+"productName": "gamedesign1",
+"productVersion": "0.1",
+"dataUrl": "f2df4c36c9eeb5012e1d85a32d519e8c.unityweb",
+"wasmCodeUrl": "150d7e5d34e19ca1f2c83aab5d9cfb9d.unityweb",
+"wasmFrameworkUrl": "f8a5bee03b412a9078d5cc8d9c37b521.unityweb",
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.2.12f1"
+}
