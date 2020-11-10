@@ -1,102 +1,102 @@
-@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,700,900');
- .wrapper {
-	 width: 100vw;
-	 height: 100vh;
-	 display: flex;
-	 flex-direction: column;
-	 align-items: center;
-	 justify-content: center;
+html{
+    height: 100%;
 }
- .button {
-	 user-select: none;
-	 display: inline-block;
-	 border: 0.2em solid;
-	 position: relative;
-	 cursor: pointer;
-	 overflow: hidden;
-	 opacity: 0.6;
-	 color: #fff;
+body{
+    image-rendering: auto;
+    background-image:url('bg.PNG');  /* fallback for old browsers */
+    background-attachment: fixed;
+    background-size:cover;
+    height: 100%;
+    margin:0px;
+    padding:0px;
+    font-family: 'Work Sans', sans-serif;
+    text-align: center;
 }
- .button__text {
-	 display: block;
-	 padding: 1em 2em;
-	 text-transform: uppercase;
-	 font-weight: bold;
+.body-color{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    position: fixed;
+    z-index: -1;
+    float: left;
+    -moz-box-shadow:    inset 0 0 100px #000000;
+    -webkit-box-shadow: inset 0 0 100px #000000;
+    box-shadow:         inset 0 0 100px #000000;
 }
- .button__text:before {
-	 content: attr(title);
+#logo_img{
+    -ms-interpolation-mode: nearest-neighbor;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: -webkit-crisp-edges;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering: pixelated;
+    -webkit-animation: fadein-top 3s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein-top 3s; /* Firefox < 16 */
+    -ms-animation: fadein-top 3s; /* Internet Explorer */
+    -o-animation: fadein-top 3s; /* Opera < 12.1 */
+    animation: fadein-top 3s;
+    display: block;
+    width: 40%;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: -25px;
 }
- .button__text--bis {
-	 display: block;
-	 position: absolute;
-	 top: 0;
-	 left: 0;
-	 right: 0;
-	 bottom: 0;
-	 transform: translateX(-1em);
-	 opacity: 0;
-}
- .button__mask {
-	 display: block;
-	 position: absolute;
-	 top: 0;
-	 left: 0;
-	 right: 0;
-	 bottom: 0;
-	 background: white;
-	 transform: translateX(-100%) rotate(45deg);
-	 transition: all 0.3s;
-}
- .button:hover {
-	 opacity: 1;
-}
- .button:hover .button__text {
-	 animation: fx-text 0.3s ease-out;
-}
- .button:hover .button__text--bis {
-	 animation: fx-text-bis 0.3s ease-out;
-}
- .button:hover .button__mask {
-	 animation: fx-mask 0.3s ease-out;
-}
- .button:active {
-	 opacity: 1;
-	 background: white;
-	 color: inherit;
-}
- @keyframes fx-mask {
-	 0% {
-		 transform: translateX(-100%) rotate(45deg);
-	}
-	 100% {
-		 transform: translateX(100%) rotate(45deg);
-	}
-}
- @keyframes fx-text {
-	 0% {
-		 transform: translateX(0);
-		 opacity: 1;
-	}
-	 100% {
-		 transform: translateX(1em);
-		 opacity: 0;
-	}
-}
- @keyframes fx-text-bis {
-	 0% {
-		 transform: translateX(-1em);
-		 opacity: 0;
-	}
-	 100% {
-		 transform: translateX(0);
-		 opacity: 1;
-	}
-}
-.slick-dots li button:before {
+#changelog{
     color: white;
 }
-.slick-dots li button:after {
-    color: red;
+#scrollbox{
+    min-width: 400px;
+    width: 500px;
+    height: 300px;
+    overflow:scroll;
+    background-color: rgba(100,100,100,0.3)
+}
+#header{
+    width: 100%;
+    text-align: left;
+    overflow: hidden;
+}
+#content{
+    background: rgba(0,0,0,0);
+    -webkit-animation: fadein-wait 3s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein-wait 3s; /* Firefox < 16 */
+    -ms-animation: fadein-wait 3s; /* Internet Explorer */
+    -o-animation: fadein-wait 3s; /* Opera < 12.1 */
+    animation: fadein-wait 3s;
+    width: 70%;
+    margin: 0 auto;
+    padding-bottom: 200px;
+}
+#subheader{
+    color: #888;
+    width: 40%;
+    text-align: left;
+    margin-bottom: 50px;
+    margin-left:40px;
+    font-size: 23px;
+}
+.carousel{
+    margin: 50px auto;
+    width: 700px;
+}
+.s{
+    background-color: white;
+}
+.button{
+    margin-left: 40px;
+    color: #888;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 20px;
+    transition-duration: 200ms;
+    cursor: pointer;
+    margin-bottom: 10px;
+    display: inline-block;
+
+}
+.button:hover{
+    transition-duration: 200ms;
+    padding-left: 20px;
+    color: white;
 }
 
 .resp-container {
