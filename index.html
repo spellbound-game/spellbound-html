@@ -17,14 +17,19 @@
 
         </div>
         <div id='header'>
-            <img id="logo_img" src="resources/logo.png" alt="Logo">
+            <img id="logo_img" src="resources/logo.png" alt="Logo" onclick="window.location.href = 'index.html';">
             <p id='subheader'>A GAME ABOUT COOPERATION</p>
+
+            <div style='float: right; position: absolute; top: 30px; right: 30px; width: 200px; overflow:hidden;height: 67px;'>
+                <img style='z-index: 1; position: absolute;width: 200px' src="resources/android.png" alt="Android">
+            </div>
+
             </br>
             <div class="button" onclick="window.location.href = 'demo.html';"> <!-- CHANGE TO ERROR.HTML FOR NEW BUILDS -->
                 <span class="button__text">PLAY ONLINE</span>
             </div>
             <br>
-            <div class="button" onclick="window.open('http://www.mediafire.com/file/gqssiiat7lcw98u/Spellbound.zip/file')">
+            <div class="button" onclick="window.location.href = 'downloads.html';">
                 <span class="button__text">DOWNLOADS</span>
             </div>
             <br>
